@@ -16,5 +16,15 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
+int	ft_printf(const char *str, ...);
+int	ft_putptr(void *ptr);
+int	ft_putchar(char c);
+int	ft_puthex(unsigned long nb, char *base);
+int	ft_putint(int n);
+int	ft_putnbr(int n);
+int	ft_putstr(char *str);
+int	ft_putunsigned(unsigned int nb);
+int	ft_strlen( const char *str);
+char	*ft_itoa(int n);
 
 #endif

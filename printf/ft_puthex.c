@@ -12,13 +12,13 @@
 
 #include "ft_printf.h"
 
-int	ft_print_hex(unsigned long nb, char *base)
+int	ft_puthex(unsigned long nb, char *base)
 {
 	int	counter;
 
 	counter = 0;
 	if (nb >= 16)
-		counter += ft_print_hex(nb / 16, base);
+		counter += ft_puthex(nb / 16, base);
 	counter += write(1, &base[nb % 16], 1);
 	return (counter);
 }

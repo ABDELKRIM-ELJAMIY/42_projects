@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-int	ft_print_unsigned(unsigned int nb)
+int	ft_putunsigned(unsigned int nb)
 {
 	int		counter;
 	char	c;
 
 	counter = 0;
 	if (nb >= 10)
-		counter += ft_print_unsigned(nb / 10);
+		counter += ft_putunsigned(nb / 10);
 	c = (nb % 10) + '0';
 	counter += write(1, &c, 1);
 	return (counter);

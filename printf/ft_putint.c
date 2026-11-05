@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_print_int(int n)
+int	ft_putint(int n)
 {
 	char	*str;
 	int		counter;
@@ -20,7 +20,7 @@ int	ft_print_int(int n)
 	str = ft_itoa(n);
 	if (!str)
 		return (0);
-	counter = ft_print_str(str);
+	counter = ft_putstr(str);
 	free(str);
 	return (counter);
 }

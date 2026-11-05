@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_print_ptr(void *ptr)
+int	ft_putptr(void *ptr)
 {
 	unsigned long	addr;
 	int				counter;
@@ -21,6 +21,6 @@ int	ft_print_ptr(void *ptr)
 		return (write(1, "(nil)", 5));
 	counter = write(1, "0x", 2);
 	addr = (unsigned long) ptr;
-	counter += ft_print_hex(addr, "0123456789abcdef");
+	counter += ft_puthex(addr, "0123456789abcdef");
 	return (counter);
 }
